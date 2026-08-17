@@ -1,0 +1,120 @@
+:root {
+  --bg: #000000;
+  --panel: #111111;
+  --panel-border: rgba(255, 255, 255, 0.18);
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.82);
+  --heading: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Avenir Next", "Futura", "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+#main-title {
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1.25rem;
+  text-align: center;
+  font-family: "Futura", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--heading);
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+#main-title:hover {
+  color: #ff0400;
+}
+
+body > div {
+  max-width: 700px;
+  margin: 1.25rem auto;
+  padding: 1.5rem 1.75rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  color: var(--heading);
+  font-family: "Futura", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.7rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Prominent signup CTA */
+.signup-link {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--text);
+  background: transparent;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 6px;
+  transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+.signup-link:hover,
+.signup-link:focus {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  outline: none;
+}
+.signup-link:active { transform: translateY(0); }
+
+/* Centered signup box with red outline */
+.signup-box {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.signup-box .signup-link {
+  border: 2px solid red;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  body > div {
+    margin: 1rem;
+    padding: 1.2rem 1rem;
+  }
+
+  #main-title {
+    padding-top: 2.2rem;
+    letter-spacing: 0.08em;
+  }
+}

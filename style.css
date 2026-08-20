@@ -37,6 +37,10 @@ body {
   color: #ff0400;
 }
 
+#venmo {
+    color: #ff0400;
+}
+
 body > div {
   max-width: 700px;
   margin: 1.25rem auto;
